@@ -10,6 +10,7 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let x = 0;
   }
 
 }

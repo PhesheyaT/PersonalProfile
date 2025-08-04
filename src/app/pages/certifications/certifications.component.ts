@@ -10,6 +10,7 @@ export class CertificationsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let x = 0;
   }
 
 }

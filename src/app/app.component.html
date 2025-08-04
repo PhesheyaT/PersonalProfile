@@ -1,26 +1,224 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class=" nav-start navbar-brand" href="">Phesheya</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor04">
-      <ul class="navbar-nav me-auto">
-        <li style=" cursor: pointer" class="nav-item">
-          <a class="nav-link active" routerLink="/pages/about-me" routerLinkActive="active" ariaCurrentWhenActive="page" >About Me
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/skills-and-experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/certifications">Certifications</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Connect</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A simple custom font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Basic styles for the collapsible sections */
+        details summary {
+            /* This is the key fix to remove the native browser arrow */
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::before {
+            content: '▶';
+            /* Increased the size of the arrow to match the new font size */
+            font-size: 1.5rem;
+            transition: transform 0.2s ease-in-out;
+            margin-right: 0.5rem;
+        }
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<!-- Changed body text color to a brighter gray for better visibility -->
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Main Container - Now has a wider max-width -->
+    <main style="margin: 30px" class="container mx-auto px-4 py-12 max-w-6xl">
+
+        <!-- About Me Section -->
+        <section id="about" class="mb-16 text-center">
+            <!-- Increased padding and font sizes -->
+            <div class="p-10 rounded-xl shadow-lg bg-gray-800">
+                <!--
+                    Using Tailwind classes for a larger image.
+                    Removed the inline style attribute to keep styling consistent.
+                -->
+                <img style="width:250px ; height:250px" src="https://i.imgur.com/8mTj4Bo.jpeg" alt="Profile Picture" class="w-48 h-48 rounded-full mx-auto mb-6">
+                <h1 class="text-5xl font-bold text-white mb-4">Thembalethu Khalala</h1>
+                <h2 class="text-2xl text-indigo-400 mb-6">Junior Full Stack Developer</h2>
+                <!-- Changed text color to a brighter gray -->
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    Full Stack Software Developer at Adapt IT; BSc in Computer Science & IT graduate from the university of KwaZulu-Natal. My ambition is to become one of the greatest Systems Analysts or Software Engineer.
+My utmost priority is to add value, contribute to organisational growth and help it reach it milestones. I am eager to grow professionally, enhance my skills and contribute to real world solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-16">
+            <!-- Increased padding on the details section -->
+            <details open class="p-8 rounded-xl shadow-lg bg-gray-800">
+                <!-- Increased the font size of the summary title -->
+                <summary class="text-4xl font-bold text-white cursor-pointer list-none focus:outline-none flex items-center">
+                    Skills
+                </summary>
+                <!-- Adjusted grid layout for longer skill descriptions -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300">
+                    <!-- Increased padding on skill cards and adjusted font size -->
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Programming in C#, Java, TypeScript, JavaScript, Python. Mark-up languages (HTML & CSS).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Database design and management using SSMS(Microsoft), MySQL & SQLite.</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Analysing & designing systems (Requirements) with UML.</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Software development methodologies (Agile, Waterfall and Scrum).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Developing Software Systems (Windows Apps) using Windows Forms in C#, also in Java with Ant/Maven using Apache NetBeans (JDBC).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Web App development with Angular, ASP.NET (C#), & Python using (Django) Framework.</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Mobile App development with Android Studio (Java & XML).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Web API development (.NET).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Reporting design and creation (Telerik).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Software Design (Design Pattern recognition, Code Smell & Pattern Refactoring techniques)</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Fine-tuning and prompt engineering LLMs.</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	Version controls (Fork, GitHub).</span>
+                    </div>
+                    <div class="flex items-center justify-center p-6 rounded-lg shadow-md bg-gray-900 hover:bg-gray-700 transition-colors">
+                        <span class="text-lg font-semibold text-center">•	OOP, Debugging, SOLID Principles, UI/UI Design Principles and (CI/CD) using Bitbucket.</span>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="mb-16">
+            <!-- Increased padding on the details section -->
+            <details class="p-8 rounded-xl shadow-lg bg-gray-800">
+                <!-- Increased the font size of the summary title -->
+                <summary class="text-4xl font-bold text-white cursor-pointer list-none focus:outline-none flex items-center">
+                    Certifications
+                </summary>
+                <div class="mt-8 space-y-6 transition-all duration-300">
+                    <!-- Increased padding and font sizes on certification cards -->
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                        <h3 class="text-2xl font-semibold text-white">BSc In Computer Science and Information Technology</h3>
+                        <!-- Changed text color to a brighter gray -->
+                        <p class="text-xl text-gray-300">UKZN | Issued: May 2024</p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                        <h3 class="text-2xl font-semibold text-white">.NET MAUI Mobile App Development</h3>
+                        <!-- Changed text color to a brighter gray -->
+                        <p class="text-xl text-gray-300">Udemy | Issued: August 2024</p>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                        <h3 class="text-2xl font-semibold text-white">Secure Coding and Design Best Practices in C#</h3>
+                        <!-- Changed text color to a brighter gray -->
+                        <p class="text-xl text-gray-300">Udemy | Issued: September 2024</p>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <!-- Increased padding on the details section -->
+            <details class="p-8 rounded-xl shadow-lg bg-gray-800">
+                <!-- Increased the font size of the summary title -->
+                <summary class="text-4xl font-bold text-white cursor-pointer list-none focus:outline-none flex items-center">
+                    Experience
+                </summary>
+                <div class="mt-8 space-y-6 transition-all duration-300">
+                    <!-- Increased padding and font sizes on experience cards -->
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-semibold text-white">Junior Full Stack Developer</h3>
+                            <!-- Changed text color to a brighter gray -->
+                            <span class="text-gray-300 text-xl">May 2024 - Present</span>
+                        </div>
+                        <p class="text-indigo-400 text-xl mb-4">Adapt IT</p>
+                        <!-- Changed text color to a brighter gray -->
+                        <ul class="list-disc list-inside space-y-1 text-gray-300 text-lg">
+                            <li>Developing and maintaining a website using Angular.</li>
+                            <li>Developing and maintaining a web API.</li>
+                            <li>Maintaining clients databases.</li>
+                            <li>Designing a creating system reports.</li>
+                            <li>Built notification system.</li>
+                            <li>Upskilling a team of graduate developers, providing code reviews and technical guidance.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-semibold text-white">Computer Science Tutor</h3>
+                            <!-- Changed text color to a brighter gray -->
+                            <span class="text-gray-300 text-xl">Feb 2024 - Nov 2024</span>
+                        </div>
+                        <p class="text-indigo-400 text-xl mb-4">Simply Tutors</p>
+                        <!-- Changed text color to a brighter gray -->
+                        <ul class="list-disc list-inside space-y-1 text-gray-300 text-lg">
+                            <li>Tutoring first and second year student in programming.</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+                <!-- Experience Section -->
+        <section id="experience">
+            <!-- Increased padding on the details section -->
+            <details class="p-8 rounded-xl shadow-lg bg-gray-800">
+                <!-- Increased the font size of the summary title -->
+                <summary class="text-4xl font-bold text-white cursor-pointer list-none focus:outline-none flex items-center">
+                    Contact
+                </summary>
+                <div class="mt-8 space-y-6 transition-all duration-300">
+                    <!-- Increased padding and font sizes on experience cards -->
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                        <div class="flex justify-between items-center mb-4">
+                          <ul class="list-disc list-inside space-y-1 text-gray-300 text-lg">
+                            <li><span class="text-gray-300 text-xl">Phone : 063 133 4238 / 063 246 5277</span></li>
+                            <li><span class="text-gray-300 text-xl">Email : thembalethupk&#64;gmail.com</span></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-md bg-gray-900">
+                      <div class="flex justify-between items-center mb-4">
+                          <ul class="list-disc list-inside space-y-1 text-gray-300 text-lg">
+                              <li>Visit my <a href="https://github.com/PhesheyaT" class="text-gray-300 text-xl" target="_blank">GitHub</a></li>
+                              <li>Visit my <a href="https://www.linkedin.com/in/thembalethu-khalala-86134b242/" class="text-gray-300 text-xl" target="_blank">LinkedIn</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+    </main>
+</body>
+</html>

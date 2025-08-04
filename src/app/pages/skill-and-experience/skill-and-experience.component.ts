@@ -10,6 +10,7 @@ export class SkillAndExperienceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let x = 0;
   }
 
 }
